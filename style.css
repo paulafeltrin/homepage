@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 body{
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     width: 100%;
     align-items: center;
@@ -27,29 +27,22 @@ body{
 header{
     background: var(--purple-bg);
     color: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-auto-rows: 20vh;
-    grid-template-areas: 
-        "figure nav form";
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-}
-figure{
-    grid-area: figure;
-    justify-self: center;
+    padding: 8vh 0;
 }
 nav{
-    grid-area: nav;
+    width: 30vw;
 }
 nav ul{
     display: flex;
     justify-content: space-evenly;
-    
 }
 nav ul li{
-    width: 25%;
     text-align: center;
     list-style: none;
+    font-size: .8rem;
 }
 nav ul li a{
     text-decoration: none;
@@ -60,7 +53,6 @@ nav ul li a:hover{
     border-left: 2px solid var(--green);
 }
 form{
-    grid-area: form;
     display: flex;
     align-items: center;
 }
@@ -81,52 +73,50 @@ form button{
     border-radius: 0 10% 10% 0;
     background: var(--button-bg);
 }
-
 .top{
-    display: grid;
-    grid: "div figure";
+    display: flex;
     background: var(--purple-bg);
-    padding: 0 2vw;
     border-bottom: 5px solid var(--green);
 }
-.top div{
+.top-text{
     display: flex;
     flex-direction: column;
-    width: 40vw;
     justify-content: space-evenly;
-    padding: 8vh 5vw;
+    width: 50%;
+    padding: 0 4vw 8vh 9vw;
 }
 h1{
     color: var(--button-bg);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height: 2.5rem;
 }
-.top p{
+.top-text p{
     color: var(--light-purple);
-    font-size: .8rem;
+    font-size: 1rem;
     line-height: 1.5rem;
 }
-button{
+.top-text button{
     color: var(--button-bg);
     background: none;
     border: none;
     display: flex;
     align-items: center;
 }
-.top figure{
-    display: flex;
-    align-items: center;
+.top-text button:hover{
+    cursor: pointer;
 }
 .top figure img{
-    border-radius: 2%;
-    width: 35vw;
+    width: 40vw;
+    padding-bottom: 8vh;
 }
+
 main{
     background: var(--light-purple);
 }
 .news{
     display: flex;
     justify-content: space-between;
+    padding: 8vh 9vw;
 }
 .news aside{
     display: flex;
@@ -135,20 +125,37 @@ main{
 .post-one,
 .post-two,
 .post-three{
-    width: 40vw;
-    padding: 5vh 4vw;
+    width: 35vw;
+}
+.post-one:hover,
+.post-two:hover,
+.post-three:hover{
+    cursor: pointer;
 }
 .post-one figure{
     display: flex;
     flex-direction: column;
 }
-.post-two{
-    height: 60%;
-    width: 90%;
-    border-bottom: 1px solid lightgray;
+.row-gray{
+    border: .5px solid rgb(222, 222, 222);
+    width: 100%;
+    height: 1px;
+    margin: auto;
 }
-.post-two p{
-    padding-bottom: 2vh;
+.news-row{
+    display: flex;
+    padding: 0 8vw;
+    margin: 0vh 0vw;
+}
+.news-row article{
+    margin: 10vh 1vw;
+}
+.news-row article:hover{
+    cursor: pointer;
+}
+
+.news-row figure img{
+    width: 25vw;
 }
 h2{
     color: var(--purple-bg);
@@ -159,14 +166,4 @@ time{
 }
 p{
     font-size: .9rem;
-}
-.news-row{
-    display: flex;
-    margin: 2vh 1vw;
-}
-.news-row article{
-    margin: 2vh 1vw;
-}
-.news-row figure img{
-    width: 24vw;
 }
