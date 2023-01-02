@@ -35,12 +35,10 @@ header{
     align-items: center;
 }
 figure{
-    border: 1px solid chartreuse;
     grid-area: figure;
     justify-self: center;
 }
 nav{
-    border: 1px solid cyan;
     grid-area: nav;
 }
 nav ul{
@@ -62,7 +60,6 @@ nav ul li a:hover{
     border-left: 2px solid var(--green);
 }
 form{
-    border: 1px solid magenta;
     grid-area: form;
     display: flex;
     align-items: center;
@@ -83,4 +80,93 @@ form button{
     border: none;
     border-radius: 0 10% 10% 0;
     background: var(--button-bg);
+}
+
+.top{
+    display: grid;
+    grid: "div figure";
+    background: var(--purple-bg);
+    padding: 0 2vw;
+    border-bottom: 5px solid var(--green);
+}
+.top div{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    justify-content: space-evenly;
+    padding: 8vh 5vw;
+}
+h1{
+    color: var(--button-bg);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+.top p{
+    color: var(--light-purple);
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+button{
+    color: var(--button-bg);
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.top figure{
+    display: flex;
+    align-items: center;
+}
+.top figure img{
+    border-radius: 2%;
+    width: 35vw;
+}
+main{
+    background: var(--light-purple);
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+}
+.news aside{
+    display: flex;
+    flex-direction: column;
+}
+.post-one,
+.post-two,
+.post-three{
+    width: 40vw;
+    padding: 5vh 4vw;
+}
+.post-one figure{
+    display: flex;
+    flex-direction: column;
+}
+.post-two{
+    height: 60%;
+    width: 90%;
+    border-bottom: 1px solid lightgray;
+}
+.post-two p{
+    padding-bottom: 2vh;
+}
+h2{
+    color: var(--purple-bg);
+    padding: 1vh 0;
+}
+time{
+    font-size: .8rem;
+}
+p{
+    font-size: .9rem;
+}
+.news-row{
+    display: flex;
+    margin: 2vh 1vw;
+}
+.news-row article{
+    margin: 2vh 1vw;
+}
+.news-row figure img{
+    width: 24vw;
 }
